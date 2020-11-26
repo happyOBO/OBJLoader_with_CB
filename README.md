@@ -28,7 +28,12 @@ gl.h
 - 해당 프로젝트를 우클릭하여 Properties> Projects build options>linker settings 탭에 들어가서 add 버튼을 통해 아래의 사진과 등록한다. 
 
 ```diff
-- 순서가 매우 중요하다. 꼭 glew32.h가 맨 앞에 위치해야한다.
+- 순서가 매우 중요하다. 꼭 glew32s.lib가 맨 앞에 위치해야한다.
 ```
 
 <img src="./how_to_link.png" width="600">
+
+
+### 주의할 점
+
+``main.cpp`` 코드 변경시 ``#define GLEW_STATIC`` 가 ``#include <GL/glew.h>`` 보다 앞에 작성되어야한다.
