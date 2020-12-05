@@ -47,6 +47,6 @@ gl.h
 
 - 제공되는 ``cup.obj`` 파일과 셰이더 파일을 사용했을 때 실행되는 화면은 다음과 같다.
 
-<img src="./cup.png" width="600">
+<img src="./cup.png" width="400">
 
 
