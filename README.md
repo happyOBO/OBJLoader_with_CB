@@ -38,9 +38,15 @@ gl.h
 
 <img src="./how_to_link.png" width="600">
 
+### 주의할 점
+
+``main.cpp`` 코드 변경시 ``#define GLEW_STATIC`` 가 ``#include <GL/glew.h>`` 보다 앞에 작성되어야한다.
+
 
 ### 실행화면
 
 - 제공되는 ``cup.obj`` 파일과 셰이더 파일을 사용했을 때 실행되는 화면은 다음과 같다.
 
 <img src="./cup.png" width="600">
+
+
