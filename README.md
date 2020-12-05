@@ -21,6 +21,11 @@ gl.h
 
 4. 원하는 obj 파일, ddl 이미지와 ``TextureFragmentShader.fragmentshader`` , ``TransformVertexShader.vertexshader``을 모두 ``[코드블럭 설치 경로]\MinGW\include\bin`` 에 위치 시킨다.
 
+### obj 파일 생성
+
+- 해당 프로그램은 삼각형들을 그려내서 렌더링 하기 때문에 obj 모델은 삼각형으로 이루어져 있어야한다.
+- 저는 [blender](https://www.blender.org/)에서 모델링을 완료한뒤 정점들을 모두 드래그 한 후, ``Ctrl`` + ``T`` 를 눌러서 사각형 폴리곤을 모두 삼각형으로 바꿔주었습니다.
+
 ### 실행
 
 - ``glut`` 새 프로젝트 를 생성하고 ``main.cpp`` 와 ``common\*`` 을 옮긴다.
@@ -28,7 +33,14 @@ gl.h
 - 해당 프로젝트를 우클릭하여 Properties> Projects build options>linker settings 탭에 들어가서 add 버튼을 통해 아래의 사진과 등록한다. 
 
 ```diff
-- 순서가 매우 중요하다. 꼭 glew32.h가 맨 앞에 위치해야한다.
+- 순서가 매우 중요하다. 꼭 glew32s.lib가 맨 앞에 위치해야한다.
 ```
 
 <img src="./how_to_link.png" width="600">
+
+
+### 실행화면
+
+- 제공되는 ``cup.obj`` 파일과 셰이더 파일을 사용했을 때 실행되는 화면은 다음과 같다.
+
+<img src="./cup.png" width="600">
